@@ -3,7 +3,7 @@
 
 Summary:	Intel(R) PRO/Wireless 3945ABG Network Connection driver
 Name:		dkms-%{module_name}
-Version:	1.2.0
+Version:	1.2.1
 Release:	%mkrel 1
 License:	GPL
 Group:		System/Kernel and hardware
