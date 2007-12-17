@@ -3,12 +3,14 @@
 
 Summary:	Intel(R) PRO/Wireless 3945ABG Network Connection driver
 Name:		dkms-%{module_name}
-Version:	1.2.1
-Release:	%mkrel 2
+Version:	1.2.2
+Release:	%mkrel 1
 License:	GPL
 Group:		System/Kernel and hardware
 URL:		http://ipw3945.sourceforge.net/
 Source0:	http://prdownloads.sourceforge.net/ipw3945/%{module_name}-%{version}.tar.bz2
+Patch0:		kernel-2.6.24-MAC_BUF_ARG.patch
+Patch1:		kernel-2.6.24-SET_MODULE_OWNER.patch
 Requires(pre):	dkms
 Requires(post):	dkms
 Requires:	ipw3945d
@@ -24,6 +26,8 @@ driver for Linux which supports the following network adapters:
 
 %prep
 %setup -q -n %{module_name}-%{version}
+%patch0 -p2
+%patch1 -p2
 
 %install
 rm -rf %{buildroot}
@@ -39,7 +43,7 @@ PACKAGE_NAME="%{module_name}"
 DEST_MODULE_LOCATION[0]="/kernel/3rdparty/%{module_name}"
 BUILT_MODULE_NAME[0]="%{module_name}"
 MAKE[0]="cd \${dkms_tree}/\${PACKAGE_NAME}/\${PACKAGE_VERSION}/build ; \
-	make KSRC=\${kernel_source_dir} IEEE80211_INC=\${kernel_source_dir}/include CONFIG_IPW3945_MONITOR=y"
+	make KSRC=\${kernel_source_dir} CONFIG_IPW3945_MONITOR=y"
 CLEAN="cd \${dkms_tree}/\${PACKAGE_NAME}/\${PACKAGE_VERSION}/build ; \
 	make KSRC=\${kernel_source_dir} clean"
 REMAKE_INITRD="no"
