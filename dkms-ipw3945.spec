@@ -16,6 +16,7 @@ Requires(post):	dkms
 Requires:	ipw3945d
 Requires:	ipw3945-ucode
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This package contains the Intel(R) PRO/Wireless 3945ABG Network Connection
