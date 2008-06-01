@@ -4,7 +4,7 @@
 Summary:	Intel(R) PRO/Wireless 3945ABG Network Connection driver
 Name:		dkms-%{module_name}
 Version:	1.2.2
-Release:	%mkrel 4
+Release:	%mkrel 5
 License:	GPL
 Group:		System/Kernel and hardware
 URL:		http://ipw3945.sourceforge.net/
@@ -51,8 +51,8 @@ REMAKE_INITRD="no"
 AUTOINSTALL="yes"
 PATCH[0]=%(basename %SOURCE1)
 PATCH[1]=%(basename %SOURCE2)
-PATCH_MATCH[0]="2\.6\.2[45]"
-PATCH_MATCH[1]="2\.6\.2[45]"
+PATCH_MATCH[0]="2\.6\.2[456]"
+PATCH_MATCH[1]="2\.6\.2[456]"
 EOF
 
 # allow monitor mode
