@@ -4,13 +4,13 @@
 Summary:	Intel(R) PRO/Wireless 3945ABG Network Connection driver
 Name:		dkms-%{module_name}
 Version:	1.2.2
-Release:	%mkrel 6
+Release:	%mkrel 7
 License:	GPL
 Group:		System/Kernel and hardware
 URL:		http://ipw3945.sourceforge.net/
 Source0:	http://prdownloads.sourceforge.net/ipw3945/%{module_name}-%{version}.tar.bz2
-Source1:	kernel-2.6.24-MAC_BUF_ARG.patch
-Source2:	kernel-2.6.24-SET_MODULE_OWNER.patch
+Source1:	http://funknetztest.de/downloads/ipw3945/ipw3945-1.2.2-kernel-2.6.24.patch
+Source2:	http://funknetztest.de/downloads/ipw3945/ipw3945-1.2.2-kernel-2.6.27.patch
 Requires(pre):	dkms
 Requires(post):	dkms
 Suggests:	ipw3945d
@@ -51,8 +51,8 @@ REMAKE_INITRD="no"
 AUTOINSTALL="yes"
 PATCH[0]=%(basename %SOURCE1)
 PATCH[1]=%(basename %SOURCE2)
-PATCH_MATCH[0]="2\.6\.2[456]"
-PATCH_MATCH[1]="2\.6\.2[456]"
+PATCH_MATCH[0]="2\.6\.2[4567]"
+PATCH_MATCH[1]="2\.6\.2[7]"
 EOF
 
 # allow monitor mode
