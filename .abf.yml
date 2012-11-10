@@ -1,0 +1,4 @@
+sources:
+  "ipw3945-1.2.2-kernel-2.6.24.patch:"	ca0ecaca0246ffbdc4b214db2eac7c4f728c13b3
+  "ipw3945-1.2.2-kernel-2.6.27.patch:"	461f30b39cfc761f0ffb61d560705a629fadf75a
+  "ipw3945-1.2.2.tar.bz2:"	1ffedc95bd3c29287777daa71afa69a8553e43bd
