@@ -7,7 +7,7 @@ Version:	1.2.2
 Release:	%mkrel 7
 License:	GPL
 Group:		System/Kernel and hardware
-URL:		http://ipw3945.sourceforge.net/
+URL:		https://ipw3945.sourceforge.net/
 Source0:	http://prdownloads.sourceforge.net/ipw3945/%{module_name}-%{version}.tar.bz2
 Source1:	http://funknetztest.de/downloads/ipw3945/ipw3945-1.2.2-kernel-2.6.24.patch
 Source2:	http://funknetztest.de/downloads/ipw3945/ipw3945-1.2.2-kernel-2.6.27.patch
